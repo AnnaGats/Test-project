@@ -10,7 +10,7 @@ pipeline {
     }
     stage('copy project from github') {
       steps {
-        sh '''git clone https://github.com/AnnaGats/Test-project.git
+        sh '''git clone https://github.com/AnnaGats/Test-project.git
 
 cd Test-project
 
@@ -32,7 +32,7 @@ mv test-1.0-SNAPSHOT.war /Library/Tomcat/webapps/
     }
     stage('db backup') {
       steps {
-        sh '''cd ~ anna
+        sh '''cd ~ anna
 cd Desktop
 cd Test-project
 cd test
@@ -48,7 +48,7 @@ mv test-1.0-SNAPSHOT.war ROOT.war'''
     }
     stage('deploy project') {
       steps {
-        sh '''d /Library/Tomcat/bin
+        sh '''cd /Library/Tomcat/bin
 ./startup.sh'''
       }
     }
